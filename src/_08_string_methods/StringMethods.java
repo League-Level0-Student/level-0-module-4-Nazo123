@@ -2,22 +2,41 @@ package _08_string_methods;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
-
+import javax.swing.JOptionPane;
 
 public class StringMethods {
 	public static void main(String[] args) {
-		
+		int index = 0;
 		// 1. Create a String variable and initialize it to whatever you want
-
+String a = "hello";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
-		
+		char i = a.charAt(index);
+	//System.out.println(i);
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
-
+		
+	//System.out.println(a.length());
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
+for (int l = a.length();l>0;l--) {
+	 i = a.charAt(index);
+	 System.out.println(i);
+	index++;
+	
+}
+index = 0;
+String answer = JOptionPane.showInputDialog("What location of the word hello do you want to know the letter of? Enter the number");
+int an = Integer.parseInt(answer);
+for (boolean t = true;t;) {
+	i = a.charAt(index);
+	if (index==an) {
+		System.out.println(i+" is located at position "+index+" in the word hello");
+	t = false;
+	}
+	index++;
 
+}
 		
 		// 5. Pick a char inside your String, and use a loop to determine
 		//    what position/index in the String the char is located.
